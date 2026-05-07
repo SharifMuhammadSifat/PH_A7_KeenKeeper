@@ -16,7 +16,7 @@ const Navbar = () => {
         setIsClicked(e.target.innerText.toLowerCase());
         
     }
-    console.log(isClicked);
+
     
     return (
         <div>
