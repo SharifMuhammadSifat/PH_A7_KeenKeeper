@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Ariana Mitchell",
+    "picture": "https://i.ibb.co.com/nq4knqN4/ariana.webp",
+    "email": "ariana.mitchell@gmail.com",
+    "days_since_contact": 18,
+    "status": "overdue",
+    "tags": ["college", "close friend"],
+    "bio": "Met during computer science classes at university. We still catch up about tech careers and travel plans.",
+    "goal": 14,
+    "next_due_date": "2026-05-03"
+  },
+  {
+    "id": 2,
+    "name": "Daniel Kim",
+    "picture": "https://i.ibb.co.com/20L1PMdc/daniel.jpg",
+    "email": "daniel.kim@outlook.com",
+    "days_since_contact": 6,
+    "status": "on-track",
+    "tags": ["gym", "gaming"],
+    "bio": "Workout partner from the local fitness center who also enjoys late-night co-op gaming sessions.",
+    "goal": 10,
+    "next_due_date": "2026-05-11"
+  },
+  {
+    "id": 3,
+    "name": "Sophia Rodriguez",
+    "picture": "https://i.ibb.co.com/Vp2XTfnm/sophia.jpg",
+    "email": "sophia.rodriguez@yahoo.com",
+    "days_since_contact": 11,
+    "status": "almost due",
+    "tags": ["work", "designer"],
+    "bio": "Former coworker from a startup project. We often exchange UI and branding ideas.",
+    "goal": 14,
+    "next_due_date": "2026-05-09"
+  },
+  {
+    "id": 4,
+    "name": "Marcus Bennett",
+    "picture": "https://i.ibb.co.com/fdBLtfwW/marcus.jpg",
+    "email": "marcus.bennett@gmail.com",
+    "days_since_contact": 25,
+    "status": "overdue",
+    "tags": ["travel", "photography"],
+    "bio": "Met during a backpacking trip in Nepal. Shares amazing landscape photography from every trip.",
+    "goal": 20,
+    "next_due_date": "2026-05-01"
+  },
+  {
+    "id": 5,
+    "name": "Emily Carter",
+    "picture": "https://i.ibb.co.com/5XcsKGBN/emily.jpg",
+    "email": "emily.carter@hotmail.com",
+    "days_since_contact": 3,
+    "status": "on-track",
+    "tags": ["book club", "neighbor"],
+    "bio": "Neighbor and reading buddy who organizes monthly book discussions and coffee meetups.",
+    "goal": 14,
+    "next_due_date": "2026-05-18"
+  },
+  {
+    "id": 6,
+    "name": "Hassan Rahman",
+    "picture": "https://i.ibb.co.com/NdnwVb9j/hasan.jpg",
+    "email": "hassan.rahman@gmail.com",
+    "days_since_contact": 13,
+    "status": "almost due",
+    "tags": ["school", "football"],
+    "bio": "School friend who now coaches a local football team. We usually meet during weekend matches.",
+    "goal": 15,
+    "next_due_date": "2026-05-08"
+  },
+  {
+    "id": 7,
+    "name": "Natalie Brooks",
+    "picture": "https://i.ibb.co.com/2Y6dj0GS/natalie.webp",
+    "email": "natalie.brooks@icloud.com",
+    "days_since_contact": 30,
+    "status": "overdue",
+    "tags": ["music", "concerts"],
+    "bio": "Friend from a local music festival group. Always recommends new indie artists and live shows.",
+    "goal": 21,
+    "next_due_date": "2026-04-28"
+  },
+  {
+    "id": 8,
+    "name": "Ethan Walker",
+    "picture": "https://i.ibb.co.com/0RpcCtnb/ethen.jpg",
+    "email": "ethan.walker@gmail.com",
+    "days_since_contact": 5,
+    "status": "on-track",
+    "tags": ["startup", "tech"],
+    "bio": "Met at a hackathon in Dhaka. We still brainstorm app ideas and AI side projects together.",
+    "goal": 12,
+    "next_due_date": "2026-05-14"
+  }
+]
