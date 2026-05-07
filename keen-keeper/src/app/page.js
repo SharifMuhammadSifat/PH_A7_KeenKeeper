@@ -1,14 +1,18 @@
 import Image from "next/image";
 import Navbar from "../Components/Navbar/Navbar";
 import { GoPlus } from "react-icons/go";
+import friendCard from "../Components/friendCard/Friendcard";
+import Friendcard from "../Components/friendCard/Friendcard";
 
 export default async function Home() {
 
   const res = await fetch("http://localhost:3000/friends.json")
   const friends = await res.json();
   
-  console.log(friends);
-  
+  const totalFriends = friends.length;
+  const onTrackFriends = friends.filter(friend => friend.status === "on-track").length;
+  const needAttentionFriends = totalFriends - onTrackFriends;
+   
 
   
 
@@ -27,8 +31,25 @@ export default async function Home() {
         </button>
       </div>
 
+      <div className="grid grid-cols-4 gap-6">
+         <div className="p-8 mt-12 bg-white rounded-lg shadow-md flex flex-col items-center gap-2">
+          <h1 className="font-semibold text-[32px] text-[#244D3F]">{totalFriends}</h1> <p className=" text-center text-[#64748B] font-normal text-[18px]">Total Friends</p>
+        </div>
+        <div className="p-8 mt-12 bg-white rounded-lg shadow-md flex flex-col items-center gap-2">
+          <h1 className="font-semibold text-[32px] text-[#244D3F]">{onTrackFriends}</h1> <p className=" text-center text-[#64748B] font-normal text-[18px]">On Track Friends</p>
+        </div>
+        <div className="p-8 mt-12 bg-white rounded-lg shadow-md flex flex-col items-center gap-2">
+          <h1 className="font-semibold text-[32px] text-[#244D3F]">{needAttentionFriends}</h1> <p className=" text-center text-[#64748B] font-normal text-[18px]" >Need Attention Friends</p>
+        </div>
+        <div className="p-8 mt-12 bg-white rounded-lg shadow-md flex flex-col items-center gap-2">
+          <h1 className="font-semibold text-[32px] text-[#244D3F]">12</h1> <p className=" text-center text-[#64748B] font-normal text-[18px]">interactions this month</p>
+        </div>
+      </div>
+
       <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {/* Friend cards will go here */}
+        {friends.map((friend) => (
+          <Friendcard key={friend.id} friend={friend} />
+        ))}
       </div>
 
     </section>
