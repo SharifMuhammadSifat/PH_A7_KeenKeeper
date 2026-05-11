@@ -1,7 +1,4 @@
-import Image from "next/image";
-import Navbar from "../Components/Navbar/Navbar";
 import { GoPlus } from "react-icons/go";
-import friendCard from "../Components/friendCard/Friendcard";
 import Friendcard from "../Components/friendCard/Friendcard";
 
 export default async function Home() {

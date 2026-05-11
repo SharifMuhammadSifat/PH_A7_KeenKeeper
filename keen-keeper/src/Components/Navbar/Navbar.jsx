@@ -4,18 +4,15 @@ import { RiHome2Line } from "react-icons/ri";
 import { RiTimeLine } from "react-icons/ri";
 import { ImStatsDots } from "react-icons/im";
 import Link from "next/link";
-import { useState } from "react";
+import { useContext } from "react";
+import { allContext } from "../../Context/Context";
 
 
 
 const Navbar = () => {
 
-    const [isClicked, setIsClicked] = useState("home");
-
-    const handleClick = (e) => {
-        setIsClicked(e.target.innerText.toLowerCase());
-        
-    }
+    const { isClicked, handleNavClick } = useContext(allContext);
+    
 
     
     return (
@@ -26,10 +23,10 @@ const Navbar = () => {
                 </div>
                 <div className="flex-none">
                     <ul className="menu menu-horizontal px-1">
-                        <li className={`${isClicked === "home" ? "bg-[#244D3F] text-white" : ""} rounded`}><Link href="/" onClick={handleClick}><RiHome2Line /> Home</Link></li>
-                        <li className={`${isClicked === "timeline" ? "bg-[#244D3F] text-white" : ""} rounded`}><Link href="/timeline" onClick={handleClick}><RiTimeLine />
+                        <li className={`${isClicked === "home" ? "bg-[#244D3F] text-white" : ""} rounded`}><Link href="/" onClick={handleNavClick}><RiHome2Line /> Home</Link></li>
+                        <li className={`${isClicked === "timeline" ? "bg-[#244D3F] text-white" : ""} rounded`}><Link href="/timeline" onClick={handleNavClick}><RiTimeLine />
                             Timeline</Link></li>
-                        <li className={`${isClicked === "stats" ? "bg-[#244D3F] text-white" : ""} rounded`}><Link href="/stats" onClick={handleClick}><ImStatsDots />
+                        <li className={`${isClicked === "stats" ? "bg-[#244D3F] text-white" : ""} rounded`}><Link href="/stats" onClick={handleNavClick}><ImStatsDots />
                             Stats</Link></li>
                     </ul>
                 </div>
