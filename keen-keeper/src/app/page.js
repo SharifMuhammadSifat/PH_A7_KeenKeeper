@@ -42,7 +42,7 @@ export default async function Home() {
           <h1 className="font-semibold text-[32px] text-[#244D3F]">{needAttentionFriends}</h1> <p className=" text-center text-[#64748B] font-normal text-[18px]" >Need Attention Friends</p>
         </div>
         <div className="p-8 mt-12 bg-white rounded-lg shadow-md flex flex-col items-center gap-2">
-          <h1 className="font-semibold text-[32px] text-[#244D3F]">12</h1> <p className=" text-center text-[#64748B] font-normal text-[18px]">interactions this month</p>
+          <h1 className="font-semibold text-[32px] text-[#244D3F]">12</h1> <p className=" text-center text-[#64748B] font-normal text-[18px ]">Interactions this month</p>
         </div>
       </div>
 
