@@ -29,6 +29,8 @@ const Context = ({ children }) => {
         getFriends();
     }, []);
 
+    const [timelineData, setTimelineData] = useState([]);
+
     const [isClicked, setIsClicked] = useState("home");
 
     const handleNavClick = (e) => {
@@ -37,7 +39,7 @@ const Context = ({ children }) => {
     }
 
     return (
-        <allContext.Provider value={{ isClicked, setIsClicked, handleNavClick, friends }}>
+        <allContext.Provider value={{ isClicked, setIsClicked, handleNavClick, friends, timelineData, setTimelineData }}>
             {children}
         </allContext.Provider>
     );

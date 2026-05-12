@@ -13,6 +13,38 @@ const FriendComp = ({ friendId }) => {
     const { friends } = useContext(allContext);
     const targetedFriend = friends.find(friend => friend.id === Number(friendId));
 
+    const { timelineData, setTimelineData } = useContext(allContext);
+
+    const handleCall = () => {
+        const newTimelineEntry = {
+            date: new Date().toISOString(),
+            friendId: targetedFriend.id,
+            action: 'call'
+        };
+        setTimelineData([...timelineData, newTimelineEntry]);
+
+    };
+
+        const handleText = () => {
+        const newTimelineEntry = {
+            date: new Date().toISOString(),
+            friendId: targetedFriend.id,
+            action: 'text'
+        };
+        setTimelineData([...timelineData, newTimelineEntry]);
+
+    };
+
+        const handleVideo = () => {
+        const newTimelineEntry = {
+            date: new Date().toISOString(),
+            friendId: targetedFriend.id,
+            action: 'video'
+        };
+        setTimelineData([...timelineData, newTimelineEntry]);
+
+    };
+
     return (
         <>
             <div className='py-20 px-61 bg-[#F8FAFC]'>
@@ -74,13 +106,13 @@ const FriendComp = ({ friendId }) => {
                             <div className='flex flex-col bg-white shadow-md rounded-md p-6 gap-4'>
                                 <h1 className='text-[#244D3F] font-medium text-[20px]'>Quick Check-In</h1>
                                 <div className='flex justify-between gap-4'>
-                                    <button className='border border-[#E9E9E9] font-mediumtext-[16px] bg-[#F8FAFC] p-4 rounded-md flex flex-col items-center gap-2 w-full cursor-pointer'>
+                                    <button onClick={handleCall} className='border border-[#E9E9E9] font-mediumtext-[16px] bg-[#F8FAFC] p-4 rounded-md flex flex-col items-center gap-2 w-full cursor-pointer'>
                                         <Image className='w-5 h-5' src="/assets/call.png" alt="Call Icon" width={20} height={20} />
                                         <p>Call</p></button>
-                                    <button className='border border-[#E9E9E9] font-mediumtext-[16px] bg-[#F8FAFC] p-4 rounded-md flex flex-col items-center gap-2 w-full cursor-pointer'>
+                                    <button onClick={handleText} className='border border-[#E9E9E9] font-mediumtext-[16px] bg-[#F8FAFC] p-4 rounded-md flex flex-col items-center gap-2 w-full cursor-pointer'>
                                         <Image className='w-5 h-5' src="/assets/text.png" alt="Text Icon" width={20} height={20} />
                                         <p>Text</p></button>
-                                    <button className='border border-[#E9E9E9] font-mediumtext-[16px] bg-[#F8FAFC] p-4 rounded-md flex flex-col items-center gap-2 w-full cursor-pointer'>
+                                    <button onClick={handleVideo} className='border border-[#E9E9E9] font-mediumtext-[16px] bg-[#F8FAFC] p-4 rounded-md flex flex-col items-center gap-2 w-full cursor-pointer'>
                                         <Image className='w-5 h-5' src="/assets/video.png" alt="Video Icon" width={20} height={20} />
                                         <p>Video</p></button>
                                 </div>
