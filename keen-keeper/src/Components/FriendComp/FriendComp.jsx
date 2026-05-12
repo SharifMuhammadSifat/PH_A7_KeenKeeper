@@ -34,18 +34,22 @@ const FriendComp = ({ friendId }) => {
                                 <p className='font-regular text-[14px] text-[#64748B]'>Preferred: {targetedFriend.email}</p>
                             </div>
                             <div className='flex flex-col gap-2 mt-4'>
-                                <button className='font-medium text-[16px] text-[#1F2937] p-4 bg-white rounded-md flex items-center justify-center gap-2 shadow-sm'>
+                                <button className='font-medium text-[16px] text-[#1F2937] p-4 bg-white rounded-md flex items-center justify-center gap-2 shadow-sm cursor-pointer '>
                                     <RiNotificationSnoozeLine /> <span>Snooze 2 weeks</span>
                                 </button>
 
-                                <button className='font-medium text-[16px] text-[#1F2937] p-4 bg-white rounded-md flex items-center justify-center gap-2 shadow-sm'>
+                                <button className='font-medium text-[16px] text-[#1F2937] p-4 bg-white rounded-md flex items-center justify-center gap-2 shadow-sm cursor-pointer '>
                                     <FiArchive /> <span>Archive</span>
                                 </button>
 
-                                <button className='font-medium text-[16px] text-red-500 p-4 bg-white rounded-md flex items-center justify-center gap-2 shadow-sm'>
+                                <button className='font-medium text-[16px] text-red-500 p-4 bg-white rounded-md flex items-center justify-center gap-2 shadow-sm cursor-pointer '>
                                     <RiDeleteBinLine color='red' /> <span>Delete</span>
                                 </button>
                             </div>
+                        </div>
+
+                        <div>
+
                         </div>
 
                     </div>
