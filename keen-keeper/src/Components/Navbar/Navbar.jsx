@@ -6,6 +6,7 @@ import { ImStatsDots } from "react-icons/im";
 import Link from "next/link";
 import { useContext } from "react";
 import { allContext } from "../../Context/Context";
+import Image from "next/image";
 
 
 
@@ -19,7 +20,7 @@ const Navbar = () => {
         <div>
             <div className="navbar bg-base-100 shadow-sm px-20 py-4">
                 <div className="flex-1">
-                    <h1 className="text-2xl"><span className="font-extrabold text-[#1F2937]">Keen</span><span className="font-semibold text-[#244D3F]">Keeper</span></h1>
+                    <Image className="w-36 h-7" src="/assets/logo.png" alt="KeenKeeper Logo" width={100} height={100} priority />
                 </div>
                 <div className="flex-none">
                     <ul className="menu menu-horizontal px-1">
