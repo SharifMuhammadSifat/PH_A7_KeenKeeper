@@ -2,7 +2,7 @@ import Chart from "../../Components/Chart/Chart";
 
 const Stats = () => {
     return (
-        <div>
+        <div className="bg-[#F8FAFC]">
             <Chart />
         </div>
     );
