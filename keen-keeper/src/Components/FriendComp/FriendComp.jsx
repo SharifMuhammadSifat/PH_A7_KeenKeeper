@@ -18,6 +18,7 @@ const FriendComp = ({ friendId }) => {
     const handleCall = () => {
         const newTimelineEntry = {
             date: new Date().toISOString(),
+            name: targetedFriend.name,
             friendId: targetedFriend.id,
             action: 'call'
         };
@@ -28,6 +29,7 @@ const FriendComp = ({ friendId }) => {
         const handleText = () => {
         const newTimelineEntry = {
             date: new Date().toISOString(),
+            name: targetedFriend.name,
             friendId: targetedFriend.id,
             action: 'text'
         };
@@ -38,6 +40,7 @@ const FriendComp = ({ friendId }) => {
         const handleVideo = () => {
         const newTimelineEntry = {
             date: new Date().toISOString(),
+            name: targetedFriend.name,
             friendId: targetedFriend.id,
             action: 'video'
         };
