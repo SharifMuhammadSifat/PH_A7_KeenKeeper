@@ -1,6 +1,7 @@
 import { GoPlus } from "react-icons/go";
 import Friendcard from "../Components/friendCard/Friendcard";
 
+
 export default async function Home() {
 
   const res = await fetch("http://localhost:3000/friends.json")
@@ -47,6 +48,7 @@ export default async function Home() {
         {friends.map((friend) => (
           <Friendcard key={friend.id} friend={friend} />
         ))}
+        
       </div>
 
     </section>

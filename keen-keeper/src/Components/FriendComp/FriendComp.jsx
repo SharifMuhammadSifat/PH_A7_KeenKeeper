@@ -6,6 +6,7 @@ import { allContext } from '../../Context/Context';
 import { RiNotificationSnoozeLine } from "react-icons/ri";
 import { FiArchive } from "react-icons/fi";
 import { RiDeleteBinLine } from "react-icons/ri";
+import { toast } from 'react-toastify';
 
 
 
@@ -23,10 +24,11 @@ const FriendComp = ({ friendId }) => {
             action: 'call'
         };
         setTimelineData([...timelineData, newTimelineEntry]);
+        toast.success("Call with " + targetedFriend.name);
 
     };
 
-        const handleText = () => {
+    const handleText = () => {
         const newTimelineEntry = {
             date: new Date().toISOString(),
             name: targetedFriend.name,
@@ -34,10 +36,13 @@ const FriendComp = ({ friendId }) => {
             action: 'text'
         };
         setTimelineData([...timelineData, newTimelineEntry]);
+        toast.success("Text message with " + targetedFriend.name, {
+            position: "top-center",
+        });
 
     };
 
-        const handleVideo = () => {
+    const handleVideo = () => {
         const newTimelineEntry = {
             date: new Date().toISOString(),
             name: targetedFriend.name,
@@ -45,6 +50,9 @@ const FriendComp = ({ friendId }) => {
             action: 'video'
         };
         setTimelineData([...timelineData, newTimelineEntry]);
+        toast.success("Video call with " + targetedFriend.name, {
+            position: "top-center",
+        });
 
     };
 
