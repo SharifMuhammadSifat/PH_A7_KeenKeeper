@@ -24,7 +24,9 @@ const FriendComp = ({ friendId }) => {
             action: 'call'
         };
         setTimelineData([...timelineData, newTimelineEntry]);
-        toast.success("Call with " + targetedFriend.name);
+        toast.success("Call with " + targetedFriend.name, {
+            position: "top-center",
+        });
 
     };
 
@@ -137,7 +139,9 @@ const FriendComp = ({ friendId }) => {
 
 
                 ) : (
-                    <p>Friend not found</p>
+                    <div className="flex justify-center mt-20">
+                        <span className="loading loading-spinner loading-xl"></span>
+                    </div>
                 )}
             </div>
 
