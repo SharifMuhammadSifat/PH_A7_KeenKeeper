@@ -7,7 +7,7 @@ import { createContext } from 'react';
 import { useEffect } from 'react';
 
 const fetchFriends = async () => {
-    const res = await fetch("ph-a7-keen-keeper-gules.vercel.app/friends.json")
+    const res = await fetch("https://ph-a7-keen-keeper-gules.vercel.app/friends.json")
     const friends = await res.json();
     return friends;
 }

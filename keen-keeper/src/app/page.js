@@ -5,7 +5,7 @@ import Friendcard from "../Components/friendCard/Friendcard";
 
 export default async function Home() {
 
-  const res = await fetch("ph-a7-keen-keeper-gules.vercel.app/friends.json");
+  const res = await fetch("https://ph-a7-keen-keeper-gules.vercel.app/friends.json");
   const friends = await res.json();
   
   const totalFriends = friends.length;
