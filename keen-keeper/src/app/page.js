@@ -2,9 +2,10 @@ import { GoPlus } from "react-icons/go";
 import Friendcard from "../Components/friendCard/Friendcard";
 
 
+
 export default async function Home() {
 
-  const res = await fetch("http://localhost:3000/friends.json")
+  const res = await fetch("http://localhost:3000/friends.json", { cache: "no-store" });
   const friends = await res.json();
   
   const totalFriends = friends.length;

@@ -101,14 +101,14 @@ const FriendComp = ({ friendId }) => {
                         </div>
 
                         <div className='col-span-2 flex flex-col justify-between gap-6'>
-                            <div className='flex justify-between'>
-                                <div className=' py-8 px-4 bg-white flex flex-col gap-2 items-center shadow-md rounded-md'>
+                            <div className='flex justify-between gap-2.5 text-center'>
+                                <div className=' py-8 px-4 bg-white flex flex-col gap-2 items-center shadow-md rounded-md w-full'>
                                     <span className=' text-[30px] font-semibold text-[#244D3F]'>{targetedFriend.days_since_contact}</span> <span className='text-[#64748B] text-[18px] font-normal'>Days Since Contact</span>
                                 </div>
-                                <div className=' py-8 px-4 bg-white flex flex-col gap-2 items-center shadow-md rounded-md'>
+                                <div className=' py-8 px-4 bg-white flex flex-col gap-2 items-center shadow-md rounded-md w-full'>
                                     <span className=' text-[30px] font-semibold text-[#244D3F]'>{targetedFriend.goal}</span> <span className='text-[#64748B] text-[18px] font-normal'>Goal (Days)</span>
                                 </div>
-                                <div className=' py-8 px-4 bg-white flex flex-col gap-2 items-center shadow-md rounded-md'>
+                                <div className=' py-8 px-4 bg-white flex flex-col gap-2 items-center shadow-md rounded-md w-full'>
                                     <span className=' text-[30px] font-semibold text-[#244D3F]'>{targetedFriend.next_due_date}</span> <span className='text-[#64748B] text-[18px] font-normal'>Next Due</span>
                                 </div>
                             </div>

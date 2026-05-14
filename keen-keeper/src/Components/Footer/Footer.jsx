@@ -14,6 +14,11 @@ const Footer = () => {
                     <Image src="/assets/instagram.png" alt="Instagram" width={30} height={30} />
                 </div>
             </div>
+
+            <div className='text-[#FAFAFA] text-[16px] opacity-50 font-normal flex items-center justify-between border-t border-[#1A8862] pt-7.5'>
+                <p >© 2024 KeenKeeper. All rights reserved.</p>
+                <p className='flex gap-10'><span>Privacy Policy</span><span>Terms of Service</span><span>Cookies</span></p>
+            </div>
             
         </div>
     );
