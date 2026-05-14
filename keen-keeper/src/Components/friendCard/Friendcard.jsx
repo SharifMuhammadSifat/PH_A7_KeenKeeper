@@ -15,7 +15,7 @@ const Friendcard = ({ friend }) => {
         <button onClick={() => setIsClicked("")}>
             <Link href={`/friend/${friend.id}`}>
                 <div className='p-6 flex flex-col items-center gap-4 bg-white shadow-md rounded-sm'>
-                    <Image className='w-20 h-20 rounded-full' src={friend.picture} alt={friend.name} width={800} height={800} />
+                    <Image className='w-20 h-20 rounded-full' src={friend.picture} alt={friend.name} width={800} height={800} priority />
                     <h2>{friend.name}</h2>
                     <p className='text-[#64748B] text-[12px]'>{friend.days_since_contact}d ago</p>
                     <div className='flex flex-wrap gap-2'>

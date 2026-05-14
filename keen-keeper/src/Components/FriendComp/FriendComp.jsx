@@ -7,11 +7,12 @@ import { RiNotificationSnoozeLine } from "react-icons/ri";
 import { FiArchive } from "react-icons/fi";
 import { RiDeleteBinLine } from "react-icons/ri";
 import { toast } from 'react-toastify';
+import { notFound } from 'next/navigation';
 
 
 
 const FriendComp = ({ friendId }) => {
-    const { friends } = useContext(allContext);
+    const { friends, loading } = useContext(allContext);
     const targetedFriend = friends.find(friend => friend.id === Number(friendId));
 
     const { timelineData, setTimelineData } = useContext(allContext);
@@ -57,6 +58,12 @@ const FriendComp = ({ friendId }) => {
         });
 
     };
+
+    if (loading) {
+        return <div className="flex justify-center mt-20">
+            <span className="loading loading-spinner loading-xl"></span>
+        </div>;
+    }
 
     return (
         <>
@@ -139,9 +146,7 @@ const FriendComp = ({ friendId }) => {
 
 
                 ) : (
-                    <div className="flex justify-center mt-20">
-                        <span className="loading loading-spinner loading-xl"></span>
-                    </div>
+                    notFound()
                 )}
             </div>
 

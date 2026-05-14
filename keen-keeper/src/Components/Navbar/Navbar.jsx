@@ -24,10 +24,10 @@ const Navbar = () => {
                 </div>
                 <div className="flex-none">
                     <ul className="menu menu-horizontal px-1">
-                        <li className={`${isClicked === "home" ? "bg-[#244D3F] text-white" : ""} rounded`}><Link href="/" onClick={handleNavClick}><RiHome2Line /> Home</Link></li>
-                        <li className={`${isClicked === "timeline" ? "bg-[#244D3F] text-white" : ""} rounded`}><Link href="/timeline" onClick={handleNavClick}><RiTimeLine />
+                        <li className={`${isClicked === "home" ? "bg-[#244D3F] text-white" : ""} rounded`}><Link href="/" onClick={() => handleNavClick("home")}><RiHome2Line /> Home</Link></li>
+                        <li className={`${isClicked === "timeline" ? "bg-[#244D3F] text-white" : ""} rounded`}><Link href="/timeline" onClick={() => handleNavClick("timeline")}><RiTimeLine />
                             Timeline</Link></li>
-                        <li className={`${isClicked === "stats" ? "bg-[#244D3F] text-white" : ""} rounded`}><Link href="/stats" onClick={handleNavClick}><ImStatsDots />
+                        <li className={`${isClicked === "stats" ? "bg-[#244D3F] text-white" : ""} rounded`}><Link href="/stats" onClick={() => handleNavClick("stats")}><ImStatsDots />
                             Stats</Link></li>
                     </ul>
                 </div>

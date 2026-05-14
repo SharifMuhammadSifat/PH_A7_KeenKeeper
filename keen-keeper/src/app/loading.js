@@ -1,6 +1,3 @@
-import react from "react";
-
-
 
 const loading = () => {
     return (

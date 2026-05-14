@@ -20,11 +20,13 @@ export const allContext = createContext();
 const Context = ({ children }) => {
 
     const [friends, setFriends] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const getFriends = async () => {
             const friendData = await fetchFriends();
             setFriends(friendData);
+            setLoading(false);
         };
         getFriends();
     }, []);
@@ -33,13 +35,12 @@ const Context = ({ children }) => {
 
     const [isClicked, setIsClicked] = useState("home");
 
-    const handleNavClick = (e) => {
-        setIsClicked(e.target.innerText.toLowerCase());
-        
+    const handleNavClick = (value) => {
+        setIsClicked(value);
     }
 
     return (
-        <allContext.Provider value={{ isClicked, setIsClicked, handleNavClick, friends, timelineData, setTimelineData }}>
+        <allContext.Provider value={{ isClicked, setIsClicked, handleNavClick, friends, timelineData, setTimelineData, loading }}>
             {children}
         </allContext.Provider>
     );
